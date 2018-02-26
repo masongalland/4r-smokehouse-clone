@@ -1,0 +1,86 @@
+.nav-bar {
+	background-color: #141414;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px 15px;
+	border-bottom: solid 1px #303030;
+}
+
+#mobile-logo {
+	height: 28px;
+	width: 36px;
+	background-image: url("./smokehouse_logo_mobile.png");
+}
+
+.hamburger {
+	cursor: pointer;
+	font: inherit;
+	color: inherit;
+	background-color: transparent;
+	border: 0;
+  margin: 0;
+  width: 25px;
+	height: 18px;
+}
+
+.hamburger-box {
+	position: relative;
+}
+
+.hamburger-inner {
+	display: block;
+	top: 50%;
+	margin-top: -2px;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+	width: 25px;
+	height: 2px;
+	background-color: #ae8648;
+	position: absolute;
+}
+.hamburger-inner::before,
+.hamburger-inner::after {
+	content: "";
+	display: block;
+}
+.hamburger-inner::before {
+	top: -8px;
+}
+.hamburger-inner::after {
+	bottom: -8px;
+}
+/*
+   * Squeeze
+ */
+.hamburger--squeeze .hamburger-inner {
+	transition-duration: 0.075s;
+	transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--squeeze .hamburger-inner::before {
+	transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+}
+.hamburger--squeeze .hamburger-inner::after {
+	transition: bottom 0.075s 0.12s ease,
+		transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--squeeze.is-active .hamburger-inner {
+	transform: rotate(45deg);
+	transition-delay: 0.12s;
+	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hamburger--squeeze.is-active .hamburger-inner::before {
+	top: 0;
+	opacity: 0;
+	transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+}
+.hamburger--squeeze.is-active .hamburger-inner::after {
+	bottom: 0;
+	transform: rotate(-90deg);
+	transition: bottom 0.075s ease,
+		transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
