@@ -1,12 +1,19 @@
 .nav-bar {
 	background-color: #141414;
 	height: 45px;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 5px 15px;
+	padding: 5px 12px;
 	border-bottom: solid 1px #303030;
+	position: fixed;
+	top: 0;
+	z-index: 5;
 }
+ .nav-bar * {
+   cursor: pointer;
+ }
 
 #mobile-logo {
 	height: 28px;
@@ -15,7 +22,6 @@
 }
 
 .hamburger {
-	cursor: pointer;
 	font: inherit;
 	color: inherit;
 	background-color: transparent;
@@ -84,3 +90,53 @@
 	transition: bottom 0.075s ease,
 		transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
+
+/* Drop-Down */
+
+.drop-down {
+  width: 100vw;
+  height: 0;
+  background-color: #141414;
+  transition: height .3s ease;
+  transition-delay: .185s;
+	position: fixed;
+	top: 45px;
+	z-index: 9;
+}
+.drop-open {
+  height: 100vh;
+  transition: height .3s ease;
+	transition-delay: .185s;
+}
+.drop-down ul {
+  color: #90887c;
+	opacity: 0;
+	visibility: hidden;
+  transition: all .3s ease;
+  transition-delay: .2s;
+  text-align: center;
+}
+
+.drop-down-list li{
+  border-bottom: 1px solid #303030;
+  padding: 15px;
+  font-size: 16px;
+  letter-spacing: 6px;
+	cursor: pointer;
+	font-family: 'Josefin Sans', sans-serif;
+	text-transform: uppercase;
+}
+.drop-down-list li:hover {
+  color: #ae8648;
+}
+.drop-down-list li:last-child {
+  background-color: #ae8648;
+  color: white;
+}
+.drop-open ul {
+	opacity: 1;
+	visibility: visible;
+  transition: all .3s ease;
+  transition-delay: .2s;
+}
+

@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Nav from './Components/Nav/Nav'
+import DropDown from './Components/Nav/DropDown'
+import Menu from './Components/Menu/Menu'
+
 
 class App extends Component {
   constructor(props) {
@@ -22,6 +25,8 @@ class App extends Component {
     return (
       <div className="App">
        <Nav active={this.state.active} toggleHam={this.toggleHam}/>
+       <DropDown active={this.state.active}/>
+       <Menu />
       </div>
     );
   }
