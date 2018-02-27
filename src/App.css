@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700');
 
+body {
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
+  transform: scaleY(1.25);
 }
 
 h1 {
@@ -11,4 +17,11 @@ h1 {
   font-size: 32px;
   font-weight: 400;
   transform: scaleY(1.45);
+}
+
+h2 {
+  font-size: 22px;
+  letter-spacing: 4px;
+  font-weight: 500;
+
 }
