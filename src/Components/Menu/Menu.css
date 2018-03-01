@@ -69,17 +69,109 @@
   box-sizing: initial;
 }
 
-.bg-active, .category-hero:hover .bg {
-  transform: translate(0px, -80px) scale(1,1);
+.bg-active,
+.category-hero:hover .bg {
+  transform: translate(0px, -80px);
   opacity: 1;
   transition: transform 1200ms ease, opacity 600ms ease;
 }
-.modal, .category-hero:hover aside {
+.bg-active {
+  transform: scale(1.1, 1.1) !important;
+  transition: transform 1200ms ease 300ms !important;
+}
+.modal,
+.category-hero:hover aside {
   color: white;
   background-color: rgba(0, 0, 0, 0.35);
   transition: all 600ms ease;
 }
-.active-icon, .category-hero:hover .close-icon {
+.active-icon,
+.category-hero:hover .close-icon {
   color: white;
   transition: all 600ms ease;
+}
+.active-icon {
+  transform: rotate(180deg);
+  transition: all 600ms ease;
+}
+
+.menu-items {
+  padding: 0;
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+  margin: 0 30px;
+  overflow: hidden;
+  transition: max-height 400ms ease, opacity 400ms ease 300ms,
+    visibility 400ms ease 300ms;
+}
+.menu-items-active {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+  max-height: 2500px;
+  transition: visibility 2500ms ease, opacity 2500ms ease,
+    max-height 2000ms ease;
+}
+
+.menu-items > header > h2,
+.menu-items li p {
+  font-family: "Domine", serif;
+  transform: scaleY(1);
+}
+
+.menu-items header {
+  text-align: center;
+}
+.menu-items > header > p {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 600;
+  margin: 0 0 60px;
+}
+.menu-items > header > h2 {
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin: 35px 0;
+  font-size: 28px;
+}
+.men-item {
+  min-height: 80px;
+}
+.men-item h3 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #8e1717;
+  transform: scaleY(1);
+  font-size: 18px;
+}
+.men-item p {
+  text-transform: capitalize;
+  line-height: 1.4em;
+  font-size: 1.3em;
+  padding: 10px 15px 50px 0;
+}
+
+.menu-downloads {
+  text-align: center;
+  padding: 25px;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+}
+.menu-downloads a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.file-icon {
+  height: 25px;
+  width: 25px;
+  color: #ae8548;
+  transform: scaleY(1.15);
+  margin-right: 8px;
 }
