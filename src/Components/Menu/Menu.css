@@ -175,3 +175,19 @@
   transform: scaleY(1.15);
   margin-right: 8px;
 }
+
+.sauces {
+  border-top: 1px solid #d8d8d7;
+  padding: 60px 0;
+  text-align: center;
+}
+.sauces h2 {
+  font-family: "Domine", serif;
+  font-style: italic;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  transform: scaleY(1);
+  font-weight: 600;
+  font-size: 25px;
+  margin-bottom: 17px;
+}

@@ -32,3 +32,29 @@ a {
 a:hover {
   color: #ae8548;
 }
+
+.btn {
+  padding: 14px 25px;
+  border: none;
+  border-radius: 3px;
+  font-family: "Josefin Sans", sans-serif;
+  letter-spacing: 1px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+}
+.btn-dark {
+  background-color: #ae8548;
+  color: white;
+}
+.btn-dark:hover {
+  background-color: #8f2626;
+}
+.btn-light {
+  color: #ae8548;
+  background-color: white;
+}
+.btn-light:hover {
+  color: white;
+  background-color: #ae8548
+}
